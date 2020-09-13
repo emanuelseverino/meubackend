@@ -1,0 +1,13 @@
+.idea
+*.sqlite3
+venv
+*.pyc
+media
+static
+uwsgi.ini
+uwsgi_params
+*.bak
+*.dat
+*.pid
+*.dir
+local_settings.py
