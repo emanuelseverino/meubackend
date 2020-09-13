@@ -77,11 +77,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = 'static'
+STATIC_ROOT = Path(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = 'media'
+MEDIA_ROOT = Path(BASE_DIR, 'media')
 
 AUTH_USER_MODEL = 'usuario.Usuario'
 
