@@ -6,6 +6,12 @@ from rest_framework.serializers import ModelSerializer
 Usuario = get_user_model()
 
 
+class UsuarioSerializer(ModelSerializer):
+    class Meta:
+        model = Usuario
+        fields = ['foto', 'first_name', 'last_name', ]
+
+
 class CriarUsuarioSerializer(ModelSerializer):
     # foto = Base64ImageField(required=False)
     first_name = serializers.CharField(required=True)

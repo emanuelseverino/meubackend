@@ -5,10 +5,13 @@ from django.conf.urls.static import static
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
 
-from usuario.api.viewsets import CriarUsuarioViewSet
+from foto.api.viewsets import FotoViewSet
+from usuario.api.viewsets import CriarUsuarioViewSet, UsuarioViewSet
 
 router = routers.DefaultRouter()
 router.register('cadastro', CriarUsuarioViewSet)
+router.register('fotos', FotoViewSet)
+router.register('usuario', UsuarioViewSet)
 
 urlpatterns = [
                   path('admin/', admin.site.urls),

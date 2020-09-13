@@ -4,7 +4,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['35.198.49.220',]
+ALLOWED_HOSTS = ['35.198.49.220', 'localhost', '127.0.0.1', '192.168.0.105', ]
 
 # Application definition
 
@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'usuario',
+    'foto',
 ]
 
 MIDDLEWARE = [
@@ -87,7 +88,7 @@ AUTH_USER_MODEL = 'usuario.Usuario'
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
+    # 'PAGE_SIZE': 10,
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
